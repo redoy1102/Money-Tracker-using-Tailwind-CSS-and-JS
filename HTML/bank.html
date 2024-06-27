@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taka ar Taka</title>
+
+    <!-- tailwind css cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.8/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center text-3xl lg:text-5xl mt-5 lg:mb-16">Taka ar Taka</h1>
+    </header>
+
+    <main>
+        <!-- Displaying all the balances -->
+        <section class="display my-5">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 w-9/12 mx-auto">
+                <div class="bg-amber-600 p-5 text-black rounded-lg">
+                    <h1 class="text-2xl">Deposit</h1>
+                    <h2 class="text-5xl">$<span id="showDeposit">00</span></h2>
+                </div>
+
+                <div class="bg-lime-600 p-5 text-white rounded-lg">
+                    <h1 class="text-2xl">Withdraw</h1>
+                    <h2 class="text-5xl">$<span id="showWithdraw">00</span></h2>
+                </div>
+
+                <div class="bg-purple-600 p-5 text-black rounded-lg text-center">
+                    <h1 class="text-2xl">Balance</h1>
+                    <h2 class="text-5xl">$<span id="showBalance">00</span></h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insertion for deposit and withdraw -->
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 w-9/12 mx-auto">
+                <div id="deposit_container" class="bg-pink-600 p-5 rounded-lg">
+                    <h1 class="text-2xl">Please Deposit</h1>
+                    <input id="input_deposit" class="block bg-white text-black rounded mt-2 p-2 lg:w-2/5" placeholder="$ Deposit amount" type="number">
+                    <button id="btn-deposit" class="btn-outline bg-pink-900 px-7 py-1 mt-2 rounded text-white">Deposit</button>
+                </div>
+
+                <div id="withdraw_container" class="bg-teal-600 p-5 text-white rounded-lg">
+                    <h1 class="text-2xl">Please Withdraw</h1>
+                    <input id="input_withdraw" class="block bg-white text-black rounded mt-2 p-2 lg:w-2/5" placeholder="$ Deposit amount" type="number">
+                    <button id="btn-withdraw" class="btn-outline bg-teal-900 px-7 py-1 mt-2 rounded text-white">Withdraw</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logout button -->
+        <section class="my-20 text-center">
+            <button id="logout_btn" class="btn btn-success text-white text-2xl w-9/12">Logout</button>
+        </section>
+    </main>
+
+    <script src="../JS/deposit.js"></script>
+</body>
+
+</html>
